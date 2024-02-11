@@ -1,0 +1,14 @@
+h1{background-color: black;
+color: aliceblue;}
+h1>span+span{color: aqua; }
+h2{color: aliceblue;
+     background-color: blueviolet;
+text-align: center;
+font-style:normal;}
+h3{
+    color: black;
+    background-color: aqua;
+    font-style: normal;
+    text-align: end;
+    text-decoration: underline;
+}
