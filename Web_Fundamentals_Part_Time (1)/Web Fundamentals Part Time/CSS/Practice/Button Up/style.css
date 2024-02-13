@@ -1,23 +1,21 @@
-.button1 { 
-    background-color: aliceblue;
-border-radius: 6px  ;
-color: rgb(76, 216, 144);
-margin: 10px;
-border-color: rgb(72, 238, 100);
-width: 100px;
+.button1 { color: rgb(105, 255, 133);
+  border-radius: 20px;
+  border-color:rgb(105, 255, 133);
+  height: auto;
+  width: 100px;
+  margin: 10px;
 }
 .button2{
-    color: aliceblue;
-    background-color: rgb(119, 254, 200);
-    border-radius: 20px;*
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border-color: rgb(105, 255, 133);
+    background-color: rgb(105, 255, 133);
     margin: 10px;
-   border-color: azure;
 }
 .button3{
-    margin: 10px;
+    background-color: blue;
     color: aliceblue;
     border-color: black;
-    background-color: blue;
-    width: 120px;
-    height: 30px;
+    border-width: 
+    
 }
