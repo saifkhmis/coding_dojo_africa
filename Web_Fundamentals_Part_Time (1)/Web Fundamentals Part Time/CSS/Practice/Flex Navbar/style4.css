@@ -1,0 +1,34 @@
+.nav{margin: auto;
+    width: 1000px;
+    background-color: rgb(69, 65, 65);
+    color: aliceblue;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+.nav-links{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+     list-style-type: none ;
+     }
+     .btn{
+        background-color: rgb(81, 208, 254);
+        color: aliceblue;
+        padding: auto;
+        box-shadow:5px 5px black;
+        border: none;
+     }
+     .nav a{
+        color: aliceblue;
+        text-decoration: none;
+     }
+     .protest-revolution-regular {
+        font-family: "Protest Revolution", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      h1{
+        justify-content: space-around;
+      }
