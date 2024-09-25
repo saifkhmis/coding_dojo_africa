@@ -12,7 +12,7 @@ class ninja {
         console.log(this.name,this.health,this.speed,this.strength)
         }
     drinkSake(){
-        this.health += 10;
+       this.health= this.health += 10;
         return this;
     }
 }
