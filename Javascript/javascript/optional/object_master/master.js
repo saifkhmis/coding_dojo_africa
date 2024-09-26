@@ -1,3 +1,4 @@
+
 const pokémon = Object.freeze([
         { "id": 1,   "name": "Bulbasaur",  "types": ["poison", "grass"] },
         { "id": 5,   "name": "Charmeleon", "types": ["fire"] },
@@ -23,28 +24,28 @@ const pokémon = Object.freeze([
         { "id": 146, "name": "Moltres",    "types": ["fire", "flying"] },
         { "id": 148, "name": "Dragonair",  "types": ["dragon"] }
     ]);
-const pokémonDivisibleByThree = pokémon.filter(pokémon => pokémon.id % 3 === 0);
-console.log(pokémonDivisibleByThree);
-const bListPkmn = pokémon.filter( p => p.types[0] === "fire" );
-console.log(bListPkmn);
-const saif = pokémon.filter(pokémon => pokémon.types.length > 1);
-console.log(saif);
-const pokémonNames = pokémon.map(pokémon => pokémon.name);
-console.log(pokémonNames);
-const pokémonNamesWithIdGreaterThan99 = pokémon
- .filter(pokémon => pokémon.id > 99)
- .map(pokémon => pokémon.name);
- console.log(pokémonNamesWithIdGreaterThan99);
-
-const pokémonNamesWithOnlyPoisonType = pokémon
-.filter(pokémon => pokémon.types.length === 1 && pokémon.types[0] === "poison")
-.map(pokémon => pokémon.name);
-console.log(pokémonNamesWithOnlyPoisonType);
-const firstTypesOfPokémonWithFlyingType = pokémon
-.filter(pokémon => pokémon.types.length > 1 && pokémon.types.includes("flying"))
-.map(pokémon => pokémon.types[0]);
-console.log(firstTypesOfPokémonWithFlyingType);
-const normalTypePokémonCount = pokémon
-.filter(pokémon => pokémon.types.includes("normal"))
-.length;
-console.log(normalTypePokémonCount);
+    
+    // an array of pokémon objects where the id is evenly divisible by 3
+    const evenly = pokémon.filter(element=>element.id %3===0 )
+    console.log(evenly)
+    // an array of pokémon objects that are "fire" type
+    const fireType = pokémon.filter(element=>element.types.includes('fire'))
+    console.log(fireType)
+    // an array of pokémon objects that have more than one type
+    const morethan= pokémon.filter(element=>element.types.length>1)
+    console.log(morethan)
+    // an array with just the names of the pokémon
+    const nname = pokémon.filter(element=>element.name)
+    console.log(nname)
+    // an array with just the names of pokémon with an id greater than 99
+    const nname99 = pokémon.filter(element=> element.name && element.id >99)
+    console.log(nname99)
+    // an array with just the names of the pokémon whose only type is poison
+    const poison = pokémon.filter(element=> element.types.includes('poison'))
+    console.log(poison)
+    // an array containing just the first type of all the pokémon whose second type is "flying"
+    const secondType = pokémon.filter(element=> element.types[1] === "flying")
+    console.log(secondType)
+    // a count of the number of pokémon that are "normal" type
+    const normalTypeCount = pokémon.filter(element => element.types.includes("normal")).length;
+    console.log(normalTypeCount);
