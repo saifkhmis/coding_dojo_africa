@@ -1,0 +1,95 @@
+1 : use my_first_db
+2  : db.createCollection("students")
+3 : db.students.insertOne([
+    {
+        name: "Alice",
+        home_state: "California",
+        lucky_number: 7,
+        birthday: { month: 5, day: 15, year: 1995 }
+    },
+    {
+        name: "Bob",
+        home_state: "California",
+        lucky_number: 2,
+        birthday: { month: 8, day: 22, year: 1993 }
+    },
+    {
+        name: "Charlie",
+        home_state: "Washington",
+        lucky_number: 5,
+        birthday: { month: 12, day: 30, year: 1990 }
+    },
+    {
+        name: "David",
+        home_state: "Washington",
+        lucky_number: 4,
+        birthday: { month: 3, day: 10, year: 1992 }
+    },
+    {
+        name: "Eve",
+        home_state: "Oregon",
+        lucky_number: 9,
+        birthday: { month: 1, day: 1, year: 1991 }
+    }
+])
+
+4 : db.students.find()
+
+5: db.students.find({
+    home_state: { $in: ["California", "Washington"] }
+})
+
+6: db.students.update(
+    {},
+    { $set: { interests: ['coding', 'brunch', 'MongoDB'] } }
+)
+
+7 : db.students.update(
+    { name: "Alice" },
+    { $addToSet: { interests: "hiking" } }
+)
+db.students.update(
+    { name: "Bob" },
+    { $addToSet: { interests: "gaming" } }
+)
+db.students.update(
+    { name: "Charlie" },
+    { $addToSet: { interests: "photography" } }
+)
+db.students.update(
+    { name: "David" },
+    { $addToSet: { interests: "music" } }
+)
+db.students.update(
+    { name: "Eve" },
+    { $addToSet: { interests: "reading" } }
+)
+
+8 : db.students.update(
+    { name: "Alice" },
+    { $addToSet: { interests: "taxes" } }
+)
+9 : db.students.update(
+    { name: "Alice" },
+    { $pull: { interests: "taxes" } }
+)
+10 :db.students.delete({ home_state: "California" })
+
+11: db.students.delete({ name: "Bob" })
+
+12: db.students.delete({ lucky_number: { $gt: 5 } })
+
+13 : db.students.update(
+    {},
+    { $set: { number_of_belts: 0 } }
+)
+
+14 : db.students.update(
+    { home_state: "Washington" },
+    { $inc: { number_of_belts: 1 } }
+)
+
+15 : db.students.update(
+    {},
+    { $set: { updated_on: new Date() } }
+)
